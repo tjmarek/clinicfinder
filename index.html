@@ -4,20 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Clinic Finder — Find Care. Feel Better.</title>
-  <meta name="description" content="Clinic Finder helps uninsured and self-pay patients compare affordable doctors and specialists with transparent pricing." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,600;6..72,700&display=swap" rel="stylesheet">
+  <meta
+    name="description"
+    content="Clinic Finder helps uninsured and self-pay patients compare affordable doctors, specialists, and common care with transparent pricing."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,600;6..72,700&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="./style.css" />
   <script defer src="./app.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header" data-scrolled="false">
+  <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="Clinic Finder home">
-        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" fill="none">
+        <img
+          class="brand-logo"
+          src="./assets/clinicfinder.jpeg"
+          alt="Clinic Finder logo"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+        />
+        <svg class="brand-fallback" viewBox="0 0 48 48" aria-hidden="true" fill="none">
           <path d="M24 6C14.611 6 7 13.611 7 23C7 35.75 24 42 24 42C24 42 41 35.75 41 23C41 13.611 33.389 6 24 6Z" stroke="currentColor" stroke-width="2.4"/>
           <path d="M18.5 23.5H29.5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
           <path d="M24 18V29" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
@@ -26,17 +38,26 @@
         <span class="brand-text">Clinic Finder</span>
       </a>
 
-      <nav class="desktop-nav" aria-label="Primary">
+      <nav class="desktop-nav" aria-label="Primary navigation">
         <a href="#how-it-works">How it works</a>
         <a href="#specialties">Specialties</a>
         <a href="#pricing-story">Why pricing</a>
+        <a href="#mission">Mission</a>
+        <a href="#providers-cta">For providers</a>
         <a href="#faq">FAQ</a>
       </nav>
 
       <div class="header-actions">
         <a class="header-link" href="#providers">Browse doctors</a>
         <a class="header-cta" href="#search-bar">Browse pricing</a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle aria-label="Open menu">
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          data-menu-toggle
+          aria-label="Open menu"
+        >
           <span></span>
           <span></span>
         </button>
@@ -44,12 +65,14 @@
     </div>
 
     <div class="mobile-menu" id="mobile-menu" hidden>
-      <div class="mobile-menu-inner">
+      <div class="container mobile-menu-inner">
         <a href="#how-it-works">How it works</a>
         <a href="#specialties">Specialties</a>
         <a href="#pricing-story">Why pricing</a>
-        <a href="#faq">FAQ</a>
+        <a href="#mission">Mission</a>
         <a href="#providers">Browse doctors</a>
+        <a href="#providers-cta">For providers</a>
+        <a href="#faq">FAQ</a>
         <a href="#search-bar">Browse pricing</a>
       </div>
     </div>
@@ -59,63 +82,101 @@
     <section class="hero" id="top">
       <div class="container hero-shell">
         <div class="hero-copy reveal">
-          <p class="eyebrow">Affordable care for self-pay patients</p>
-          <h1>Find care with upfront pricing.</h1>
-          <p class="hero-text">Clinic Finder helps people without insurance compare affordable primary care, specialists, imaging, and common visits nearby before they call or book anywhere else.</p>
+          <p class="eyebrow">For uninsured and self-pay patients</p>
+          <h1>Find Care. Feel Better.</h1>
+          <p class="hero-text">
+            Compare affordable doctors, specialists, imaging, and common visits near you without digging through insurance-first healthcare websites.
+          </p>
 
           <form class="search-bar" id="search-bar" action="#" method="get">
             <label class="search-field search-field-large">
               <span class="search-label">What are you looking for?</span>
-              <input type="text" name="query" placeholder="Primary care, dermatologist, MRI, allergy testing..." aria-label="What are you looking for?">
+              <input
+                type="text"
+                name="query"
+                placeholder="Primary care, dermatologist, MRI, women’s health..."
+                aria-label="What are you looking for?"
+              />
             </label>
+
             <label class="search-field">
               <span class="search-label">Location</span>
-              <input type="text" name="location" placeholder="Austin, TX" aria-label="Location">
+              <input
+                type="text"
+                name="location"
+                placeholder="Austin, TX"
+                aria-label="Location"
+              />
             </label>
+
             <label class="search-field">
               <span class="search-label">Coverage</span>
-              <input type="text" name="coverage" placeholder="I'm paying for myself" aria-label="Coverage">
+              <input
+                type="text"
+                name="coverage"
+                placeholder="I'm paying for myself"
+                aria-label="Coverage"
+              />
             </label>
+
             <button class="search-button" type="submit">Find care</button>
           </form>
+
+          <div class="hero-trust">
+            <span>Built for cash-pay care</span>
+            <span>No booking required</span>
+            <span>Price-first research</span>
+          </div>
         </div>
 
         <div class="hero-art reveal reveal-delay" aria-hidden="true">
-          <div class="hero-shape"></div>
-          <svg class="hero-illustration" viewBox="0 0 540 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M342 49L438 49L510 123L414 123L342 49Z" fill="#20CE8F"/>
-            <path d="M432 0H530L530 124H456C444.954 124 436 115.046 436 104V0Z" fill="#F0C640"/>
-            <path d="M366 33C366 17.536 378.536 5 394 5H434V104C434 114.493 425.493 123 415 123H394C378.536 123 366 110.464 366 95V33Z" fill="#FEFEFE"/>
-            <path d="M191 101C191 85.536 203.536 73 219 73H273C288.464 73 301 85.536 301 101V170H191V101Z" fill="#20CE8F"/>
-            <circle cx="228" cy="93" r="22" fill="#F7C2A7"/>
-            <path d="M208 144C208 127.431 221.431 114 238 114H271C287.569 114 301 127.431 301 144V171H208V144Z" fill="#20CE8F"/>
-            <path d="M150 107L196 136L174 171L128 142L150 107Z" fill="#162141"/>
-            <rect x="176" y="110" width="92" height="56" rx="16" fill="#FEFEFE"/>
-            <rect x="188" y="123" width="45" height="7" rx="3.5" fill="#D7DCE8"/>
-            <rect x="188" y="137" width="33" height="7" rx="3.5" fill="#D7DCE8"/>
-            <rect x="188" y="149" width="40" height="10" rx="5" fill="#DDF7EC"/>
-            <circle cx="251" cy="138" r="11" fill="#E1EDFF"/>
-            <path d="M246 138H256" stroke="#0E63F1" stroke-width="2.5" stroke-linecap="round"/>
-            <path d="M251 133V143" stroke="#0E63F1" stroke-width="2.5" stroke-linecap="round"/>
-            <path d="M425 45C425 31.193 436.193 20 450 20H474C487.807 20 499 31.193 499 45V69H425V45Z" fill="#F7C2A7"/>
-            <path d="M408 73C408 58.088 420.088 46 435 46H485C499.912 46 512 58.088 512 73V103H408V73Z" fill="#F0C640"/>
-            <rect x="365" y="92" width="92" height="28" rx="14" fill="#FEFEFE"/>
-            <rect x="376" y="100" width="25" height="7" rx="3.5" fill="#D7DCE8"/>
-            <rect x="406" y="100" width="18" height="7" rx="3.5" fill="#20CE8F"/>
+          <div class="hero-glow hero-glow-one"></div>
+          <div class="hero-glow hero-glow-two"></div>
+
+          <svg class="hero-illustration" viewBox="0 0 560 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="248" y="138" width="188" height="120" rx="26" fill="#FEFEFE" stroke="rgba(22,33,65,.08)"/>
+            <rect x="274" y="164" width="84" height="10" rx="5" fill="#DCE7FB"/>
+            <rect x="274" y="184" width="118" height="10" rx="5" fill="#DCE7FB"/>
+            <rect x="274" y="212" width="64" height="28" rx="14" fill="#E7FBF3"/>
+            <path d="M303 226H325" stroke="#20CE8F" stroke-width="3" stroke-linecap="round"/>
+
+            <rect x="124" y="116" width="128" height="72" rx="22" fill="#FEFEFE" stroke="rgba(22,33,65,.08)"/>
+            <rect x="144" y="136" width="58" height="8" rx="4" fill="#DCE7FB"/>
+            <rect x="144" y="154" width="42" height="8" rx="4" fill="#DCE7FB"/>
+            <circle cx="220" cy="150" r="14" fill="#EAF2FF"/>
+            <path d="M214 150H226" stroke="#0E63F1" stroke-width="3" stroke-linecap="round"/>
+            <path d="M220 144V156" stroke="#0E63F1" stroke-width="3" stroke-linecap="round"/>
+
+            <path d="M395 52H514C530.569 52 544 65.431 544 82V154H431C411.118 154 395 137.882 395 118V52Z" fill="#0A9FA3"/>
+            <path d="M378 92C378 71.565 394.565 55 415 55H458V160H415C394.565 160 378 143.435 378 123V92Z" fill="#FEFEFE"/>
+            <path d="M402 96C402 83.85 411.85 74 424 74H438C450.15 74 460 83.85 460 96V114H402V96Z" fill="#F3C2A8"/>
+            <path d="M390 124C390 112.402 399.402 103 411 103H452C463.598 103 473 112.402 473 124V160H390V124Z" fill="#162141"/>
+
+            <circle cx="213" cy="236" r="68" fill="#20CE8F"/>
+            <circle cx="213" cy="198" r="24" fill="#F3C2A8"/>
+            <path d="M164 274C164 242.52 189.52 217 221 217H242C273.48 217 299 242.52 299 274V324H164V274Z" fill="#162141"/>
+            <rect x="189" y="252" width="72" height="80" rx="22" fill="#FEFEFE"/>
+            <path d="M225 272V312" stroke="#0E63F1" stroke-width="7" stroke-linecap="round"/>
+            <path d="M205 292H245" stroke="#0E63F1" stroke-width="7" stroke-linecap="round"/>
+
+            <path d="M72 94C72 70.804 90.804 52 114 52H180V88C180 106.778 164.778 122 146 122H72V94Z" fill="#20CE8F"/>
+            <path d="M180 52H236C259.196 52 278 70.804 278 94V122H202C189.85 122 180 112.15 180 100V52Z" fill="#0E63F1"/>
           </svg>
         </div>
       </div>
     </section>
 
-    <section class="insurance-strip">
+    <section class="specialties-section" id="specialties">
       <div class="container">
         <div class="section-copy reveal">
           <p class="section-kicker">Built for people paying cash</p>
-          <h2>See the kinds of care people search first.</h2>
-          <p>Instead of insurance networks, Clinic Finder focuses on common self-pay needs and price-aware decisions.</p>
+          <h2>Browse the kinds of care people search first.</h2>
+          <p>
+            Clinic Finder is designed around common self-pay needs instead of insurance plan logic.
+          </p>
         </div>
 
-        <div class="pill-grid reveal reveal-delay" id="specialties">
+        <div class="pill-grid reveal reveal-delay">
           <div class="info-pill">Primary care</div>
           <div class="info-pill">Dermatology</div>
           <div class="info-pill">OB-GYN</div>
@@ -142,7 +203,7 @@
             <h3>Primary care visits</h3>
             <p class="provider-meta">Annual exams, sick visits, follow-ups</p>
             <p class="provider-price">From $79</p>
-            <p class="provider-note">Typical self-pay listings for quick access care and preventive visits.</p>
+            <p class="provider-note">A strong starting point for self-pay routine and urgent needs.</p>
             <a class="provider-action" href="#search-bar">Compare prices</a>
           </article>
 
@@ -151,7 +212,7 @@
             <h3>Dermatology</h3>
             <p class="provider-meta">Rashes, acne, skin checks</p>
             <p class="provider-price">From $99</p>
-            <p class="provider-note">Useful for patients trying to avoid surprise consult pricing.</p>
+            <p class="provider-note">Useful for patients trying to avoid unclear consult pricing.</p>
             <a class="provider-action" href="#search-bar">Compare prices</a>
           </article>
 
@@ -160,7 +221,7 @@
             <h3>Imaging & scans</h3>
             <p class="provider-meta">MRI, CT, ultrasound, X-ray</p>
             <p class="provider-price">From $395</p>
-            <p class="provider-note">Compare imaging centers before calling so you know the range first.</p>
+            <p class="provider-note">Compare imaging options before calling multiple facilities.</p>
             <a class="provider-action" href="#search-bar">Compare prices</a>
           </article>
 
@@ -169,14 +230,14 @@
             <h3>Specialist visits</h3>
             <p class="provider-meta">Cardiology, ENT, GI, ortho</p>
             <p class="provider-price">From $145</p>
-            <p class="provider-note">A pricing-first way to narrow the right clinic for your needs.</p>
+            <p class="provider-note">Narrow options faster when cost is part of the decision.</p>
             <a class="provider-action" href="#search-bar">Compare prices</a>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="steps-band" id="how-it-works">
+    <section class="steps-section" id="how-it-works">
       <div class="container">
         <div class="steps-intro reveal">
           <p class="section-kicker">How it works</p>
@@ -187,33 +248,90 @@
           <article class="step-card reveal">
             <div class="step-illustration illustration-search"></div>
             <h3>Search by need</h3>
-            <p>Start with a specialty, procedure, or visit type instead of digging through insurance filters.</p>
+            <p>Start with a visit type, specialty, or service instead of digging through insurance filters.</p>
             <a href="#search-bar">See specialties</a>
           </article>
 
           <article class="step-card reveal">
             <div class="step-illustration illustration-price"></div>
             <h3>Review price ranges</h3>
-            <p>Understand common cash-pay costs before you spend time calling multiple offices.</p>
+            <p>Get a clearer sense of what care may cost before you start calling around.</p>
             <a href="#pricing-story">Why this matters</a>
           </article>
 
           <article class="step-card reveal">
             <div class="step-illustration illustration-contact"></div>
             <h3>Contact directly</h3>
-            <p>Reach out to the clinic once you know the pricing and fit make sense for you.</p>
+            <p>Reach out once the clinic looks like the right fit for your budget and situation.</p>
             <a href="#providers">Browse care</a>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="pricing-band" id="pricing-story">
+    <section class="mission-section" id="mission">
+      <div class="container mission-layout">
+        <div class="mission-copy reveal">
+          <p class="section-kicker">The mission</p>
+          <h2>Healthcare shopping should feel clearer, calmer, and more human.</h2>
+          <p>
+            Clinic Finder exists to make self-pay care easier to understand. People without insurance often have to research more, ask harder questions, and make faster choices with less certainty. This homepage is built to give them a cleaner starting point.
+          </p>
+        </div>
+
+        <div class="mission-points reveal reveal-delay">
+          <div class="mission-item">
+            <strong>Transparent first</strong>
+            <p>Lead with pricing clarity instead of forcing users into a booking funnel.</p>
+          </div>
+          <div class="mission-item">
+            <strong>Built for real life</strong>
+            <p>Useful for freelancers, families in coverage gaps, and high-deductible households.</p>
+          </div>
+          <div class="mission-item">
+            <strong>Direct connection</strong>
+            <p>Patients compare here, then contact providers directly when it makes sense.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-section">
+      <div class="container">
+        <div class="section-copy reveal">
+          <p class="section-kicker">Why people would trust it</p>
+          <h2>Designed to remove friction, not create more.</h2>
+        </div>
+
+        <div class="trust-grid">
+          <article class="trust-card reveal">
+            <h3>No login wall</h3>
+            <p>People can understand the product before handing over personal information.</p>
+          </article>
+          <article class="trust-card reveal">
+            <h3>No insurance maze</h3>
+            <p>The experience is centered on self-pay reality, not payer jargon.</p>
+          </article>
+          <article class="trust-card reveal">
+            <h3>No booking pressure</h3>
+            <p>Users can compare first and act when they are ready.</p>
+          </article>
+          <article class="trust-card reveal">
+            <h3>No vague positioning</h3>
+            <p>The page clearly explains who this product is for and why it exists.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing-section" id="pricing-story">
       <div class="container pricing-layout">
         <div class="pricing-copy reveal">
           <p class="section-kicker">Why pricing first matters</p>
           <h2>People without insurance need clarity before commitment.</h2>
-          <p>Clinic Finder is designed for freelancers, uninsured households, and anyone trying to avoid vague healthcare pricing. The goal is simple: understand likely cost, narrow the right clinic, then take the next step confidently.</p>
+          <p>
+            Clinic Finder is designed for uninsured households, freelancers, and anyone trying to avoid vague healthcare pricing. The goal is simple: understand likely cost, narrow the right clinic, then take the next step confidently.
+          </p>
         </div>
 
         <div class="pricing-panel reveal reveal-delay">
@@ -233,7 +351,62 @@
             <span>MRI</span>
             <strong>$395+</strong>
           </div>
-          <p class="panel-caption">Example pricing ranges shown for homepage presentation.</p>
+          <p class="panel-caption">Example price ranges shown for homepage presentation.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="proof-section">
+      <div class="container proof-layout">
+        <div class="proof-copy reveal">
+          <p class="section-kicker">Why this page converts better</p>
+          <h2>It answers the questions self-pay patients already have.</h2>
+          <p>
+            Most visitors want to know three things quickly: what kind of care they can find, whether pricing is visible, and what to do next. This section helps reinforce those answers before they bounce.
+          </p>
+        </div>
+
+        <div class="proof-metrics reveal reveal-delay">
+          <div class="metric">
+            <strong>Search-first</strong>
+            <span>Visitors can begin with the problem they need solved.</span>
+          </div>
+          <div class="metric">
+            <strong>Price-aware</strong>
+            <span>Messaging reinforces affordability and cost transparency.</span>
+          </div>
+          <div class="metric">
+            <strong>Patient-centered</strong>
+            <span>No booking flow interrupts the research stage.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="providers-cta-section" id="providers-cta">
+      <div class="container providers-cta-layout">
+        <div class="providers-cta-copy reveal">
+          <p class="section-kicker">For providers</p>
+          <h2>Affordable clinics deserve better visibility too.</h2>
+          <p>
+            If a practice offers transparent self-pay care, Clinic Finder can help the right patients find it faster. This gives you space later for provider onboarding, listing methodology, or a submit-your-practice flow.
+          </p>
+          <a class="provider-cta-button" href="#">Join as a provider</a>
+        </div>
+
+        <div class="providers-cta-panel reveal reveal-delay">
+          <div class="provider-stat">
+            <strong>Transparent positioning</strong>
+            <span>Show cash-pay pricing more clearly.</span>
+          </div>
+          <div class="provider-stat">
+            <strong>Qualified traffic</strong>
+            <span>Reach people already searching by need and cost.</span>
+          </div>
+          <div class="provider-stat">
+            <strong>Cleaner intake</strong>
+            <span>Reduce pricing confusion before the first call.</span>
+          </div>
         </div>
       </div>
     </section>
@@ -244,6 +417,7 @@
           <p class="section-kicker">Browse by city</p>
           <h2>Start local, then compare smarter.</h2>
         </div>
+
         <div class="city-grid reveal reveal-delay">
           <span>Austin</span>
           <span>Houston</span>
@@ -267,15 +441,18 @@
           <p class="section-kicker">FAQ</p>
           <h2>What visitors usually want to know.</h2>
         </div>
+
         <div class="faq-list">
           <details class="faq-item reveal">
             <summary>Can I book through Clinic Finder?</summary>
-            <p>No. The site is built for price discovery and clinic research, then patients contact the provider directly.</p>
+            <p>No. The site is designed for price discovery and clinic research, then patients contact the provider directly.</p>
           </details>
+
           <details class="faq-item reveal">
             <summary>Who is this for?</summary>
             <p>Anyone without insurance, using self-pay pricing, or dealing with a high deductible and trying to compare affordable care options.</p>
           </details>
+
           <details class="faq-item reveal">
             <summary>What kinds of care can be listed?</summary>
             <p>Primary care, specialists, imaging, women’s health, mental health, labs, and other common outpatient services.</p>
@@ -283,6 +460,23 @@
         </div>
       </div>
     </section>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <p class="footer-brand">Clinic Finder</p>
+          <p class="footer-copy">Find Care. Feel Better.</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="#how-it-works">How it works</a>
+          <a href="#specialties">Specialties</a>
+          <a href="#pricing-story">Why pricing</a>
+          <a href="#providers-cta">For providers</a>
+          <a href="#faq">FAQ</a>
+        </div>
+      </div>
+    </footer>
   </main>
 </body>
 </html>
