@@ -18,11 +18,7 @@ if (menuToggle && mobileMenu) {
 
   menuToggle.addEventListener("click", () => {
     const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
-    if (isOpen) {
-      closeMenu();
-    } else {
-      openMenu();
-    }
+    isOpen ? closeMenu() : openMenu();
   });
 
   mobileMenu.querySelectorAll("a").forEach((link) => {
@@ -30,9 +26,7 @@ if (menuToggle && mobileMenu) {
   });
 
   window.addEventListener("resize", () => {
-    if (window.innerWidth > 920) {
-      closeMenu();
-    }
+    if (window.innerWidth > 920) closeMenu();
   });
 }
 
@@ -45,7 +39,7 @@ if ("IntersectionObserver" in window) {
         obs.unobserve(entry.target);
       });
     },
-    { threshold: 0.14 }
+    { threshold: 0.12 }
   );
 
   revealItems.forEach((item) => observer.observe(item));
@@ -61,8 +55,8 @@ if (searchForm) {
     if (!button) return;
 
     const originalText = button.textContent;
-    button.textContent = "Coming soon";
     button.disabled = true;
+    button.textContent = "Coming soon";
 
     window.setTimeout(() => {
       button.textContent = originalText;
