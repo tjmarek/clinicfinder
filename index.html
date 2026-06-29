@@ -25,7 +25,7 @@
       <a class="brand" href="#top" aria-label="Clinic Finder home">
         <img
           class="brand-logo"
-          src="./assets/clinicfinder.jpeg"
+          src="./assets/logo.jpeg"
           alt="Clinic Finder logo"
           onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
         />
@@ -61,8 +61,13 @@
           data-menu-toggle
           aria-label="Open menu"
         >
-          <span></span>
-          <span></span>
+          <img
+            class="menu-logo"
+            src="./assets/logo.jpeg"
+            alt=""
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+          />
+          <span class="menu-icon-fallback" aria-hidden="true"></span>
         </button>
       </div>
     </div>
@@ -83,7 +88,7 @@
   <main id="main">
     <section class="hero" id="top">
       <div class="container hero-shell">
-        <div class="hero-copy reveal">
+        <div class="hero-copy reveal is-visible">
           <p class="eyebrow">Affordable care discovery for uninsured and self-pay patients</p>
           <h1>Know the price before you call the clinic.</h1>
           <p class="hero-text">
@@ -128,26 +133,6 @@
             <span>For cash-pay patients</span>
             <span>No booking funnel</span>
             <span>Compare before contacting</span>
-          </div>
-        </div>
-
-        <div class="hero-logo-stage reveal reveal-delay" aria-hidden="true">
-          <div class="hero-logo-orb hero-logo-orb-a"></div>
-          <div class="hero-logo-orb hero-logo-orb-b"></div>
-          <div class="hero-logo-frame">
-            <img
-              class="hero-logo-image"
-              src="./assets/clinicfinder.jpeg"
-              alt=""
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
-            />
-            <div class="hero-logo-fallback" aria-hidden="true">
-              <svg viewBox="0 0 180 180" fill="none">
-                <path d="M90 18C54.654 18 26 46.654 26 82C26 130 90 154 90 154C90 154 154 130 154 82C154 46.654 125.346 18 90 18Z" stroke="currentColor" stroke-width="10"/>
-                <path d="M69 84H111" stroke="currentColor" stroke-width="10" stroke-linecap="round"/>
-                <path d="M90 63V105" stroke="currentColor" stroke-width="10" stroke-linecap="round"/>
-              </svg>
-            </div>
           </div>
         </div>
       </div>
