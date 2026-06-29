@@ -1,41 +1,36 @@
-const menuToggle = document.querySelector("[data-menu-toggle]");
-const mobileMenu = document.getElementById("mobile-menu");
-const revealItems = document.querySelectorAll(".reveal");
-const searchForm = document.getElementById("search-bar");
+const menuToggle = document.querySelector('[data-menu-toggle]');
+const mobileMenu = document.getElementById('mobile-menu');
+const revealItems = document.querySelectorAll('.reveal:not(.is-visible)');
+const searchForm = document.getElementById('search-bar');
 
 if (menuToggle && mobileMenu) {
-  const closeMenu = () => {
-    menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.setAttribute("aria-label", "Open menu");
-    mobileMenu.hidden = true;
+  const setMenu = (open) => {
+    menuToggle.setAttribute('aria-expanded', String(open));
+    menuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    mobileMenu.hidden = !open;
   };
 
-  const openMenu = () => {
-    menuToggle.setAttribute("aria-expanded", "true");
-    menuToggle.setAttribute("aria-label", "Close menu");
-    mobileMenu.hidden = false;
-  };
+  setMenu(false);
 
-  menuToggle.addEventListener("click", () => {
-    const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
-    isOpen ? closeMenu() : openMenu();
+  menuToggle.addEventListener('click', () => {
+    setMenu(menuToggle.getAttribute('aria-expanded') !== 'true');
   });
 
-  mobileMenu.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", closeMenu);
+  mobileMenu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => setMenu(false));
   });
 
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 920) closeMenu();
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 920) setMenu(false);
   });
 }
 
-if ("IntersectionObserver" in window) {
+if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver(
     (entries, obs) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
-        entry.target.classList.add("is-visible");
+        entry.target.classList.add('is-visible');
         obs.unobserve(entry.target);
       });
     },
@@ -44,19 +39,18 @@ if ("IntersectionObserver" in window) {
 
   revealItems.forEach((item) => observer.observe(item));
 } else {
-  revealItems.forEach((item) => item.classList.add("is-visible"));
+  revealItems.forEach((item) => item.classList.add('is-visible'));
 }
 
 if (searchForm) {
-  searchForm.addEventListener("submit", (event) => {
+  searchForm.addEventListener('submit', (event) => {
     event.preventDefault();
-
-    const button = searchForm.querySelector(".search-button");
+    const button = searchForm.querySelector('.search-button');
     if (!button) return;
 
     const originalText = button.textContent;
     button.disabled = true;
-    button.textContent = "Coming soon";
+    button.textContent = 'Coming soon';
 
     window.setTimeout(() => {
       button.textContent = originalText;
