@@ -913,6 +913,16 @@ input {
   }
 }
 
+.hero-lead {
+  margin: 1.1rem auto 0;
+  max-width: 34rem;
+  font-size: clamp(1.1rem, 0.95rem + 0.5vw, 1.4rem);
+  line-height: 1.25;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--dark);
+}
+
 .accent-underline {
   position: relative;
   display: inline-block;
