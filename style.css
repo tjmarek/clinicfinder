@@ -942,3 +942,13 @@ input {
   opacity: 0.98;
   pointer-events: none;
 }
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 80;
+  background: rgba(254, 254, 254, 0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(22, 33, 65, 0.08);
+  overflow: clip;
+}
