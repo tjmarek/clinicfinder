@@ -912,3 +912,23 @@ input {
     transform: none;
   }
 }
+
+.accent-underline {
+  position: relative;
+  display: inline-block;
+  color: inherit;
+  z-index: 1;
+}
+
+.accent-underline::after {
+  content: "";
+  position: absolute;
+  left: -0.08em;
+  right: -0.08em;
+  bottom: 0.06em;
+  height: 0.42em;
+  z-index: -1;
+  background: no-repeat center / 100% 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='220' height='32' viewBox='0 0 220 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 18C29 11 56 24 81 19C108 14 131 11 157 16C178 20 196 18 216 14' stroke='%2320CE8F' stroke-width='8' stroke-linecap='round'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
